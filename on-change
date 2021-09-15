@@ -1,4 +1,5 @@
 #!/bin/sh
+# apt install inotify-tools
 DIR="$1"
 shift
 while inotifywait -qqre modify "$DIR"; do
