@@ -1,0 +1,6 @@
+#!/bin/sh
+DIR="$1"
+shift
+while inotifywait -qqre modify "$DIR"; do
+    $@
+done
